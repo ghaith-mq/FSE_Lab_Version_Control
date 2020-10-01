@@ -1,8 +1,11 @@
 from storage import Storage
 
 def test_add():
-    pass
-
+    st = Storage({'a': 1, 'b': 2})
+    st.add(('c', 3))
+    val = st.get('c')
+    assert val == 3, "The value is different from the one that was added"
+    	
 def test_remove():
     pass
 

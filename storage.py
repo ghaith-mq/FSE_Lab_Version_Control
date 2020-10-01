@@ -17,7 +17,7 @@ class Storage:
             self.data.pop(key)
             return self.data
         else:
-            return None
+            return "Key does not exist"
         
 
     def set(self):

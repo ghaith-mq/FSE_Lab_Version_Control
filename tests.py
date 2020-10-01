@@ -7,7 +7,11 @@ def test_add():
     assert val == 3, "The value is different from the one that was added"
     	
 def test_remove():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    st.remove(key)
+    print("new dictionary")
+
 
 def test_set():
     pass

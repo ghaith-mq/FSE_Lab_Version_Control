@@ -12,8 +12,9 @@ class Storage:
         else:
             return None
 
-    def remove(self):
-        pass
+    def remove(self,key):
+        self.data.pop(key, None)
+        return self
 
     def set(self):
         pass
@@ -25,4 +26,3 @@ class Storage:
         if key in self.data:
             raise Exception("The key is already in storage. To change the stored value, use storage.set")
         self.data[key] = value
-

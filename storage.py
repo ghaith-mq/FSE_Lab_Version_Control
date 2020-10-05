@@ -12,8 +12,9 @@ class Storage:
         else:
             return None
 
-    def remove(self):
-        pass
+    def remove(self,key):
+        self.data.pop(key, None)
+        return self
 
     def set(self, key, new_val):
         if key in self.data:
@@ -21,6 +22,11 @@ class Storage:
         else:
             raise Exception("No such key")
         
-    
-    def add(self):
-        pass
+    def add(self, pair):
+        if len(pair) != 2:
+            raise Exception
+        key, value = pair
+        if key in self.data:
+            raise Exception("The key is already in storage. To change the stored value, use storage.set")
+        self.data[key] = value
+
